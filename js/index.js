@@ -136,9 +136,33 @@ $(function () {
        $(this).find(".fea2-hide").show("slow");
    },function () {
        $(this).find(".fea2-hide").hide();
-   })
-});
+   });
+   /*模块延迟加载*/
+    window.addEventListener("scroll",function () {
+        if (getTop("design-feature") < 500) {
+            getObj("design-feature").addClass("animate1").addClass("animatedura1");
+        }
+        if (getTop("store") < 500) {
+            getObj("store").addClass("animate2").addClass("animatedura1");
+        }
+        if (getTop("marketing") < 500) {
+            getObj("marketing").addClass("animate3").addClass("animatedura1");
+        }
+        if (getTop("support") < 500) {
+            getObj("support").addClass("animate4").addClass("animatedura1");
+        }
+    });
 
+});
+/*模块延迟加载*/
+function getTop(className) {
+    var obj = getObj(className);
+    return obj[0].getBoundingClientRect().top;//返回元素的大小及其相对于视口的位置
+}
+function getObj(className) {
+    return $(document.getElementsByClassName(className)[0]);
+}
+/*模块延迟加载*/
 function changeWords(count) {
     switch (count){
         case 0:getTyper("beautiful.");

@@ -518,6 +518,7 @@ h3 {
   margin: 0;
 }
 .design-feature {
+  opacity: 0;
   width: 84%;
   /*height: 500px;*/
   position: relative;
@@ -540,6 +541,7 @@ h3 {
 .store {
   width: 84%;
   /*height: 515px;*/
+  opacity: 0;
   position: relative;
   margin: 300px auto 100px;
 }
@@ -564,6 +566,7 @@ h3 {
 .marketing {
   width: 100%;
   /*height: 473px;*/
+  opacity: 0;
   position: relative;
   margin: 200px auto 100px;
 }
@@ -721,6 +724,7 @@ h3 {
 .support {
   width: 100%;
   /*height: 432px;*/
+  opacity: 0;
   position: relative;
   margin: 270px auto 200px;
 }
@@ -897,6 +901,28 @@ footer {
   opacity: 0.7;
   animation: cursorAnimation 1.5s step-end infinite;
 }
+.animate1 {
+  animation-name: animate1;
+  -webkit-animation-name: animate1;
+}
+.animate2 {
+  animation-name: animate2;
+  -webkit-animation-name: animate2;
+}
+.animate3 {
+  animation-name: animate3;
+  -webkit-animation-name: animate3;
+}
+.animate4 {
+  animation-name: animate4;
+  -webkit-animation-name: animate4;
+}
+.animatedura1 {
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 @keyframes cursorAnimation {
   0% {
     opacity: 0;
@@ -906,6 +932,46 @@ footer {
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes animate1 {
+  0% {
+    margin-top: 210px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 130px;
+    opacity: 1;
+  }
+}
+@keyframes animate2 {
+  0% {
+    margin-top: 380px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 300px;
+    opacity: 1;
+  }
+}
+@keyframes animate3 {
+  0% {
+    margin-top: 280px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 200px;
+    opacity: 1;
+  }
+}
+@keyframes animate4 {
+  0% {
+    margin-top: 350px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 270px;
+    opacity: 1;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -936,8 +1002,58 @@ footer {
   .marketing-img-wrap2 {
     top: 70px;
   }
+  @keyframes animate2 {
+    0% {
+      margin-top: 280px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 200px;
+      opacity: 1;
+    }
+  }
+  @keyframes animate4 {
+    0% {
+      margin-top: 250px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 170px;
+      opacity: 1;
+    }
+  }
 }
 @media screen and (max-width: 992px) {
+  @keyframes animate2 {
+    0% {
+      margin-top: 210px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 130px;
+      opacity: 1;
+    }
+  }
+  @keyframes animate3 {
+    0% {
+      margin-top: 200px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 120px;
+      opacity: 1;
+    }
+  }
+  @keyframes animate4 {
+    0% {
+      margin-top: 180px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 100px;
+      opacity: 1;
+    }
+  }
   .header-wrap .search {
     width: 42%;
   }
